@@ -20,7 +20,9 @@ docker-compose run web bundle exec rails new . --force --database=mysql --api
 config/database.yml
 
 ```diff
+- password
 - host: localhost
++ password: password
 + host: db
 ```
 
@@ -37,6 +39,5 @@ docker-compose up
 ```sh
 docker-compose exec web bash
 
-bin/rails db:setup
-bin/rails db:migrate
+bin/rails db:prepare
 ```
