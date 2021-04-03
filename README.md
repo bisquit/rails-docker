@@ -34,7 +34,7 @@ docker-compose build
 docker-compose up
 ```
 
-## Initialize rails db
+## Create db tables
 
 ```sh
 docker-compose exec web bash
