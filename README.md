@@ -1,17 +1,27 @@
 ## Scaffold rails
 
+basic (sqlite)
 ```bash
 docker-compose run web bundle exec rails new . --force
 ```
 
-+ mysql
+db mysql
 ```sh
 docker-compose run web bundle exec rails new . --force --database=mysql
 ```
 
-+ api mode
+api mode
 ```bash
 docker-compose run web bundle exec rails new . --force --database=mysql --api
+```
+
+## Modify database config
+
+config/database.yml
+
+```diff
+- host: localhost
++ host: db
 ```
 
 ## Build docker image and up
