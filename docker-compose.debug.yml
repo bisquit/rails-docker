@@ -12,8 +12,10 @@ services:
       - "3306:3306"
   web:
     build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bin/rails s -b 0.0.0.0 -p 3000"
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s -b 0.0.0.0 -p 3000"
     volumes:
       - .:/app
     ports:
       - "3000:3000"
+      - "1234:1234"
+      - "26162:26162"
