@@ -34,6 +34,14 @@ docker-compose build
 docker-compose up
 ```
 
+※ For M1 Mac, use mariadb instead.
+
+docker-compose.yml
+```diff
+- image: mysql:8.0
++ image: mariadb
+```
+
 ## Create db tables
 
 ```sh
