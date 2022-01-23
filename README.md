@@ -49,3 +49,13 @@ docker-compose exec web bash
 
 bin/rails db:prepare
 ```
+
+## (Optional) Use sidekiq
+
+use `docker-compose.sidekiq.yml`.
+
+Before `docker-compose up`, install sidekiq
+
+```
+docker-compose run web bundle add sidekiq
+```
