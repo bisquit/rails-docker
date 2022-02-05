@@ -1,5 +1,9 @@
 ## Scaffold rails
 
+```bash
+docker-compose run web bundle install
+```
+
 basic (sqlite)
 ```bash
 docker-compose run web bundle exec rails new . --force
@@ -32,14 +36,6 @@ config/database.yml
 docker-compose build
 
 docker-compose up
-```
-
-※ For M1 Mac, use mariadb instead.
-
-docker-compose.yml
-```diff
-- image: mysql:8.0
-+ image: mariadb
 ```
 
 ## Create db tables
